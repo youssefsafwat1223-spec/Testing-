@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AquaSense — Presentation</title>
+  <link rel="stylesheet" href="css/presentation.css">
+</head>
+<body>
+  <!-- Presentation wrapper -->
+  <div id="presentation" class="presentation">
+
+    <!-- Global underwater background layer (shared across slides) -->
+    <div class="bg-root" aria-hidden="true">
+      <div class="underwater-gradient"></div>
+      <div class="light-rays"></div>
+      <div class="floating-fog"></div>
+
+      <!-- Bubbles container -->
+      <div class="bubbles" id="global-bubbles"></div>
+
+      <!-- Parallax fish group (multiple fish with different speeds & sizes) -->
+      <div class="fish-layer" id="fish-layer">
+        <!-- SVG fish - realistic-ish styling (no external images) -->
+        <svg class="fish fish-1" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fish1-body" x1="0" x2="1">
+              <stop offset="0" stop-color="#f6a" />
+              <stop offset="1" stop-color="#e64" />
+            </linearGradient>
+            <filter id="fish-shadow" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+          <g filter="url(#fish-shadow)">
+            <ellipse cx="90" cy="40" rx="60" ry="26" fill="url(#fish1-body)" />
+            <path d="M10 40 Q30 30 10 20 Q30 40 10 40 Z" fill="#ffbf80"/>
+            <path d="M150 40 L190 20 L170 40 L190 60 Z" fill="#ff9f43" />
+            <circle cx="115" cy="32" r="4" fill="#000"/>
+            <path d="M60 40 C75 48, 95 52, 110 48" stroke="#fff3" stroke-width="2" fill="none" opacity="0.25"/>
+          </g>
+        </svg>
+
+        <svg class="fish fish-2" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fish2-body" x1="0" x2="1">
+              <stop offset="0" stop-color="#2ec4b6"/>
+              <stop offset="1" stop-color="#028090"/>
+            </linearGradient>
+            <filter id="fish-shadow2" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.12"/>
+            </filter>
+          </defs>
+          <g filter="url(#fish-shadow2)">
+            <ellipse cx="90" cy="40" rx="56" ry="24" fill="url(#fish2-body)" />
+            <path d="M150 40 L184 24 L168 40 L184 56 Z" fill="#056674"/>
+            <circle cx="117" cy="33" r="3.5" fill="#001"/>
+            <path d="M60 40 C75 48, 95 52, 110 48" stroke="#ffffff33" stroke-width="2" fill="none" opacity="0.22"/>
+          </g>
+        </svg>
+
+        <svg class="fish fish-3" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fish3-body" x1="0" x2="1">
+              <stop offset="0" stop-color="#ffd166" />
+              <stop offset="1" stop-color="#ef476f" />
+            </linearGradient>
+            <filter id="fish-shadow3" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.14"/>
+            </filter>
+          </defs>
+          <g filter="url(#fish-shadow3)">
+            <ellipse cx="90" cy="40" rx="64" ry="28" fill="url(#fish3-body)" />
+            <path d="M150 40 L190 30 L170 40 L190 50 Z" fill="#ff7b7b"/>
+            <circle cx="120" cy="32" r="4" fill="#000"/>
+            <path d="M60 40 C75 48, 95 52, 110 48" stroke="#fff2" stroke-width="2" fill="none" opacity="0.2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Controls: left/right arrows -->
+    <button class="nav-button nav-prev" id="nav-prev" aria-label="Previous slide">‹</button>
+    <button class="nav-button nav-next" id="nav-next" aria-label="Next slide">›</button>
+
+    <!-- Page dots -->
+    <div class="page-dots" id="page-dots" role="tablist" aria-label="Slide navigation"></div>
+
+    <!-- Slides container -->
+    <main class="slides" id="slides" role="main">
+      <!-- Slide 1 -->
+      <section class="slide" data-index="0" id="slide-1">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h1 class="title shimmer">AQUASENSE</h1>
+          <p class="subtitle">Smart IoT Monitoring System for Sustainable Fish Farming</p>
+          <p class="lead">Welcome to AquaSense — Real-time IoT intelligence supporting Egypt's Vision 2030.</p>
+        </div>
+      </section>
+
+      <!-- Slide 2 -->
+      <section class="slide" data-index="1" id="slide-2">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground content-grid">
+          <h2 class="title">Team Members</h2>
+          <div class="team-grid">
+            <article class="card">Abanob Thabet Fathy Agban</article>
+            <article class="card">Sherif Diaa Elsayed Hanafy</article>
+            <article class="card">Yohana Mourad Moawad Youssef</article>
+            <article class="card">Ziad Hamed Muhammad Al-Khozamy</article>
+            <article class="card">Ahmed Al Amir Ahmed Shawky</article>
+            <article class="card">Youssef Safwat Sadek Ata</article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section class="slide" data-index="2" id="slide-3">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground two-col">
+          <div class="text-block">
+            <h2 class="title">Project Introduction</h2>
+            <p>
+              Our project is <strong>REAL TIME IoT DATA SENSORS</strong>.<br><br>
+              AquaSense aligns with Egypt's 2030 Vision by providing a real-time monitoring system for Egyptian fish farms.
+              It supports up to <strong>11 tanks</strong> (multiple species) with <strong>8 sensors per tank</strong>.
+              The system is expandable: more tanks, more sensors, more intelligence.<br><br>
+              AquaSense contributes to Egypt's sustainability goals as emphasized by national leadership.
+            </p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder" data-placeholder="Egypt Vision 2030 image"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4 -->
+      <section class="slide" data-index="3" id="slide-4">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">Project Features</h2>
+          <p class="lead">The project consists of 4 core milestones.</p>
+          <div class="features-row">
+            <div class="feature">
+              <div class="icon">①</div>
+              <h3>Real-Time Data Simulation</h3>
+            </div>
+            <div class="feature">
+              <div class="icon">②</div>
+              <h3>ETL Pipeline</h3>
+            </div>
+            <div class="feature">
+              <div class="icon">③</div>
+              <h3>Kafka Alert System</h3>
+            </div>
+            <div class="feature">
+              <div class="icon">④</div>
+              <h3>Real-time IoT Dashboard</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5 -->
+      <section class="slide" data-index="4" id="slide-5">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">1. Real-time Data Simulation</h2>
+          <p>
+            We created a realistic dataset by merging two real fish-farm datasets. No random data was used.
+            Columns include: fish, temperature, humidity, light, oh, electricalconductivity, turbidity, watertemp, tds.
+          </p>
+          <div class="footer-placeholders">
+            <div class="placeholder small"></div>
+            <div class="placeholder small"></div>
+            <div class="placeholder small"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 6 -->
+      <section class="slide" data-index="5" id="slide-6">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">2. ETL System</h2>
+          <p>
+            A Python ETL script runs every 5 seconds: Extracts data → Classifies readings → Loads to SQLite database.
+          </p>
+          <div class="diagram-placeholder placeholder large"></div>
+        </div>
+      </section>
+
+      <!-- Slide 7 -->
+      <section class="slide" data-index="6" id="slide-7">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">3. Alert System</h2>
+          <p>
+            The Kafka alert system triggers warnings when classification enters F+, F++, F-, or F--.
+            A Python worker checks values every 5 seconds.
+          </p>
+          <div class="alerts-row">
+            <div class="placeholder medium"></div>
+            <div class="placeholder medium"></div>
+            <div class="pulse-alert" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8 -->
+      <section class="slide" data-index="7" id="slide-8">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">4. Real-time Dashboard</h2>
+          <p>
+            The final stage is a Flask dashboard showing trends, alerts, and the latest sensor values.
+          </p>
+          <div class="dash-grid">
+            <div class="placeholder ss"></div>
+            <div class="placeholder ss"></div>
+            <div class="placeholder ss"></div>
+            <div class="placeholder ss"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 9 -->
+      <section class="slide" data-index="8" id="slide-9">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">Testing</h2>
+          <p>The entire pipeline is available on GitHub.</p>
+          <a class="link" href="https://github.com/IotprojectDEPI/Final-Graduation-project-IoT-Data-Pipeline-" target="_blank" rel="noopener">GitHub: Final-Graduation-project-IoT-Data-Pipeline</a>
+          <p>All stages were integrated and tested end-to-end.</p>
+          <div class="timeline placeholder"></div>
+        </div>
+      </section>
+
+      <!-- Slide 10 -->
+      <section class="slide" data-index="9" id="slide-10">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">Future Enhancements</h2>
+          <ul class="future-list">
+            <li>AI forecasting to predict issues before they happen</li>
+            <li>Adding tank volume metadata to meet Egyptian standards</li>
+            <li>Automatic email notifications for workers</li>
+            <li>More features planned</li>
+          </ul>
+          <div class="icons-row">
+            <div class="neon-icon"></div>
+            <div class="neon-icon"></div>
+            <div class="neon-icon"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 11 -->
+      <section class="slide" data-index="10" id="slide-11">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">User Experience</h2>
+          <p class="lead">
+            Open the dashboard → select tanks → watch real-time charts update → see alerts → workers act → decisions improve sustainability.
+            The IoT pipeline runs behind the scenes, delivering seamless interactions and fast insights.
+          </p>
+          <div class="ux-timeline placeholder"></div>
+        </div>
+      </section>
+
+      <!-- Slide 12 -->
+      <section class="slide" data-index="11" id="slide-12">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">Conclusion</h2>
+          <p>
+            We applied iterative development, testing at every stage. Our work aligns with Egypt's Vision 2030 through sustainability,
+            efficiency, and technological innovation. AquaSense delivers a fully functional IoT data pipeline from simulation to visualization.
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 13 -->
+      <section class="slide" data-index="12" id="slide-13">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground">
+          <h2 class="title">Why We Succeeded</h2>
+          <div class="team-photo placeholder wide"></div>
+          <ul class="success-list">
+            <li>Iterative workflow</li>
+            <li>Continuous testing</li>
+            <li>Instructor guidance</li>
+            <li>Data sourcing accuracy</li>
+            <li>Team coordination</li>
+            <li>Vision alignment</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 14 -->
+      <section class="slide" data-index="13" id="slide-14">
+        <div class="slide-bg-layer"></div>
+        <div class="slide-foreground final-slide">
+          <h2 class="title shimmer">Thank you for exploring AquaSense</h2>
+          <p class="lead">Our dream is to achieve the highest score and help Egyptian fish farms and the Egyptian community.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/presentation.js"></script>
+</body>
+</html>
